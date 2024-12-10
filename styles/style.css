@@ -4,7 +4,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
   row-gap: var(--gap);
-  column-gap: 40px;
+  column-gap: 23px;
 }
 
 .grid-1 {
@@ -253,6 +253,10 @@ header {
 }
 
 @media (min-width: 768px) {
+  .grid {
+    column-gap: 40px;
+  }
+
   .container {
     padding: 0 var(--paddingMD);
   }
