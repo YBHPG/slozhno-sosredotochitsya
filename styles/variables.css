@@ -6,8 +6,8 @@
 :root {
   --paddingSM: 10px;
   --paddingMD: 20px;
-  --gap: 20px;
-  --gap-2: 10px;
+  --gapMD: 20px;
+  --gapSM: 10px;
   --font-family: "IBM Plex Mono", monospace;
   --bg-color: #000028;
   --text-color: #F1B2CE;
