@@ -259,6 +259,10 @@ header {
   background-attachment: fixed;
 }
 
+.content__text:not(:last-child) {
+  padding-bottom: 10px;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .content-grid {
     column-gap: 40px;
