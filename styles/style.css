@@ -62,31 +62,30 @@
 
 .rected::before,
 .rected::after {
-  top: 0;
-  right: 0;
   position: absolute;
   z-index: -1;
   content: "";
-  height: 25px;
-  width: 25px;
-  top: 0;
-  /* Выравнивание по вертикальной оси */
-  left: 0;
-  /* Выравнивание по горизонтальной оси */
 }
 
 .rected::before {
-  top: 0;
-  right: 0;
-  border-top: 1px solid var(--title-color-secondary);
-  border-right: 1px solid var(--title-color-secondary);
+  position: absolute;
+  border-top: 1px var(--title-color-secondary) solid;
+  border-right: 1px var(--title-color-secondary) solid;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 0px;
+  inset-block-start: 0px;
 }
 
 .rected::after {
-  left: 0;
-  bottom: 0;
-  border-left: 1px solid var(--title-color-secondary);
-  border-bottom: 1px solid var(--title-color-secondary);
+  content: "";
+  position: absolute;
+  border-bottom: 1px var(--title-color-secondary) solid;
+  border-left: 1px var(--title-color-secondary) solid;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: 0px;
+  inset-block-end: 0px;
 }
 
 header {
@@ -99,22 +98,22 @@ header {
   z-index: 2;
 }
 
-.header-section1 {
+.header-section__buttons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
 
-.header-section2 {
+.header-section__no-focus {
   align-self: center;
 }
 
-.header-section3 {
+.header-section__text {
   align-self: center;
 }
 
-.header-section3__desc {
+.header-section__text__title {
   grid-column: 1/7;
 }
 
@@ -286,11 +285,11 @@ header {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .header-section2 {
+  .header-section__no-focus {
     margin-left: calc(-1 * var(--paddingMD));
   }
 
-  .header-section3__desc {
+  .header-section__text__title {
     grid-column: 4/7;
     min-width: 364px;
   }
@@ -363,6 +362,16 @@ header {
 
 @media (min-width: 1024px) {
 
+  .header-section__buttons {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 0px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
   .content-grid.what__content,
   .content-grid.what__list {
     column-gap: 20px;
@@ -402,15 +411,15 @@ header {
     column-gap: 20px;
   }
 
-  .header-section2 {
+  .header-section__no-focus {
     margin-left: calc(-1 * var(--paddingMD));
   }
 
-  .header-section3 {
+  .header-section__text {
     column-gap: 0px;
   }
 
-  .header-section3__desc {
+  .header-section__text__title {
     grid-column: 4/7;
     min-width: 364px;
   }
